@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //Botones y textos
     Button btnLog;
-    TextView createUsser;
+    LinearLayout createUsser;
     TextView forgotPass;
     EditText editTextUser;
     EditText editTextPass;

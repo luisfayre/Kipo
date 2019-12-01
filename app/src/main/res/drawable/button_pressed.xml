@@ -1,14 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="329dp"
+    android:height="50dp"
+    android:viewportWidth="329"
+    android:viewportHeight="50"
+    >
 
-    <solid
-        android:color="#00a24a"
-        />
-    <padding android:left="7dp"
-        android:top="7dp"
-        android:right="7dp"
-        android:bottom="7dp" />
-    <stroke
-        />
-    <corners android:radius= "18dp" />
-</shape>
+    <group>
+
+        <clip-path
+            android:pathData="M3 0H326C327.657 0 329 1.34315 329 3V47C329 48.6569 327.657 50 326 50H3C1.34315 50 0 48.6569 0 47V3C0 1.34315 1.34315 0 3 0Z"
+            />
+
+        <path
+            android:pathData="M0 0V50H329V0"
+            android:fillColor="#25B47B"
+            />
+
+    </group>
+
+</vector>
