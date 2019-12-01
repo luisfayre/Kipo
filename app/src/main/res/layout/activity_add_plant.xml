@@ -67,16 +67,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/planthappy" />
+            app:srcCompat="@drawable/planta2"
+            android:elevation="2dp"/>
 
-        <Button
+        <!--Button
             android:id="@+id/button2"
             style="@style/buttonPlus"
             android:layout_width="35dp"
             android:layout_height="34dp"
             android:text="+"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-            app:layout_constraintEnd_toEndOf="@+id/imageView6" />
+            app:layout_constraintEnd_toEndOf="@+id/imageView6" /-->
 
         <EditText
             android:id="@+id/edTxtPlanName"
@@ -216,16 +217,24 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dp">
 
         <Button
             android:id="@+id/btnAdd"
             style="@style/button"
-            android:layout_width="173dp"
-            android:layout_height="46dp"
-            android:layout_centerInParent="true"
-            android:text="ADD" />
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="ADD"/>
+
+        <Button
+            android:onClick="ver"
+            android:id="@+id/btnAdda"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:text="ver"/>
     </RelativeLayout>
 
 

@@ -30,9 +30,28 @@ dependencies {
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
 
     //Firebase Real Time Database
-    implementation 'com.google.firebase:firebase-database:19.1.0'
-    //Firebase authentication
+    /*implementation 'com.google.firebase:firebase-core:17.0.0'
     implementation 'com.google.firebase:firebase-auth:17.0.0'
+    implementation 'com.google.firebase:firebase-database:17.0.0'
+    implementation 'com.google.firebase:firebase-storage:10.2.0'
+    //implementation 'com.google.firebase:firebase-storage:17.0.0'
+    implementation 'com.google.firebase:firebase-config:17.0.0'
+    implementation 'com.google.firebase:firebase-core:17.0.0'*/
+
+    //Glide Images
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+
+    //Firebase
+    implementation 'com.google.firebase:firebase-core:10.2.0'
+    implementation 'com.google.firebase:firebase-auth:10.2.0'
+    implementation 'com.google.firebase:firebase-database:10.2.0'
+    implementation 'com.google.firebase:firebase-storage:10.2.0'
+    implementation 'com.firebase:firebase-client-android:2.4.0'
+    implementation 'com.firebaseui:firebase-ui-database:1.2.0'
+    implementation 'com.firebaseui:firebase-ui-storage:1.2.0'
+    implementation 'com.google.firebase:firebase-config:10.2.0'
+
 }
 
 apply plugin: 'com.google.gms.google-services'
