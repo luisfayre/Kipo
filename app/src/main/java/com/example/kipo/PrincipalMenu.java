@@ -28,7 +28,7 @@ public class PrincipalMenu extends AppCompatActivity {
                             selectedFragment).commit();
                     return true;
                 case R.id.navigation_garden:
-                    selectedFragment = new GardenFragment();
+                    selectedFragment = new GardenFragment2();
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                             selectedFragment).commit();
                     return true;

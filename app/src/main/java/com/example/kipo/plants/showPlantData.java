@@ -144,7 +144,7 @@ public class showPlantData extends AppCompatActivity {
             plantDescription = itemView.findViewById(R.id.txtPlantDesc);
         }
 
-        private void plantImag(String title) {
+        public void plantImag(String title) {
             Glide.with(itemView.getContext())
                     .load(title)
                     .crossFade()
