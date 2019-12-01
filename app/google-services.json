@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "865020516626",
+    "firebase_url": "https://kipo-5c607.firebaseio.com",
+    "project_id": "kipo-5c607",
+    "storage_bucket": "kipo-5c607.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865020516626:android:f880f032d5986c80753bcb",
+        "android_client_info": {
+          "package_name": "com.example.kipo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "865020516626-vb6cnu044n7opaoilfu3t95sptfvjejk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBAJiam98laBOpWDR4r02v7K1Jy4h0EiM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "865020516626-vb6cnu044n7opaoilfu3t95sptfvjejk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
