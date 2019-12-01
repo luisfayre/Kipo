@@ -182,7 +182,7 @@ public class Register extends AppCompatActivity {
                             //REGISTRAR USUSARIO
                             saveUserInformation();
                             Toast.makeText(Register.this, "Se ha registrado correctamente", Toast.LENGTH_SHORT).show();
-
+                            goMainScreen();
                         } else {
                             Toast.makeText(Register.this, "No se ha registrado correctamente", Toast.LENGTH_SHORT).show();
                             btnSingUp.setEnabled(true);
