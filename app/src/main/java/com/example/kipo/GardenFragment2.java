@@ -120,10 +120,10 @@ public class GardenFragment2 extends Fragment implements View.OnClickListener {
                ;
                 int selecteItems = position;
                 if( mFirebaseAdapter.getItem(position) != null){
-                    Toast.makeText(theInflatedView.getContext(), "Existe", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(theInflatedView.getContext(), "Existe", Toast.LENGTH_SHORT).show();
                     imgGone();
                 }else {
-                    Toast.makeText(theInflatedView.getContext(), "No xiste", Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(theInflatedView.getContext(), "No xiste", Toast.LENGTH_SHORT).show();
 
                 }
 
@@ -131,7 +131,9 @@ public class GardenFragment2 extends Fragment implements View.OnClickListener {
 
                     @Override
                     public void onClick(final View v) {
-                        Toast.makeText(theInflatedView.getContext(), "Pos:"+position, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(theInflatedView.getContext(), "Pos:"+position, Toast.LENGTH_SHORT).show();
+
+                        /*
                         AlertDialog.Builder builder = new AlertDialog.Builder(theInflatedView.getContext());
                         builder.setMessage("Deseas eliminar este elemento?").setCancelable(false)
                                 .setPositiveButton("Si", new DialogInterface.OnClickListener() {
@@ -152,7 +154,7 @@ public class GardenFragment2 extends Fragment implements View.OnClickListener {
                                 });
                         AlertDialog dialog = builder.create();
                         dialog.setTitle("Confimar");
-                        dialog.show();
+                        dialog.show();*/
                     }
                 });
 

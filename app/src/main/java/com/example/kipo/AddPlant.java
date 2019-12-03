@@ -141,6 +141,7 @@ public class AddPlant extends AppCompatActivity{
                     childRef_name.setValue(sName);
                     childRef_desc.setValue(sDesc);
                     childRef_type.setValue("tipo");
+                    finish();
                    // rootRef.child("plants").child(user.getUid()).push().setValue(plantDataItem);
                 }else{
                     Toast.makeText(getApplicationContext(), "Sin titulo, por favor inserte uno", Toast.LENGTH_SHORT).show();
@@ -215,9 +216,9 @@ public class AddPlant extends AppCompatActivity{
             });
         }
     }
-
+/*
     public void ver(View view) {
         Intent intent = new Intent(this, showPlantData.class);
         startActivity(intent);
-    }
+    }*/
 }

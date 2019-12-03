@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 public class PrincipalMenu extends AppCompatActivity {
 
+    private TextView myText;
+
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -26,16 +28,19 @@ public class PrincipalMenu extends AppCompatActivity {
                     selectedFragment = new ProfileFragment();
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                             selectedFragment).commit();
+                    myText.setText("Profile");
                     return true;
                 case R.id.navigation_garden:
                     selectedFragment = new GardenFragment2();
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                             selectedFragment).commit();
+                    myText.setText("My plants");
                     return true;
                 case R.id.navigation_options:
                     selectedFragment = new OptionsFragment();
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                             selectedFragment).commit();
+                    myText.setText("Opciones");
                     return true;
             }
             return false;
@@ -49,11 +54,14 @@ public class PrincipalMenu extends AppCompatActivity {
         getSupportActionBar().hide(); // hide the title bar
         setContentView(R.layout.activity_principal_menu);
 
+        myText = findViewById(R.id.textView6);
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new ProfileFragment()).commit();
+        myText.setText("Profile");
 
     }
 
