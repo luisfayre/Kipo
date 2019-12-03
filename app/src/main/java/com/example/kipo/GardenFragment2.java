@@ -117,13 +117,13 @@ public class GardenFragment2 extends Fragment implements View.OnClickListener {
                 viewHolder.plantName(model.getName());
                 viewHolder.plantDesc(model.getDescription());
                 viewHolder.plantImag(model.getImage());
-               ;
+                ;
                 int selecteItems = position;
-                if( mFirebaseAdapter.getItem(position) != null){
+                if (mFirebaseAdapter.getItem(position) != null) {
                     //Toast.makeText(theInflatedView.getContext(), "Existe", Toast.LENGTH_SHORT).show();
                     imgGone();
-                }else {
-                  //  Toast.makeText(theInflatedView.getContext(), "No xiste", Toast.LENGTH_SHORT).show();
+                } else {
+                    //  Toast.makeText(theInflatedView.getContext(), "No xiste", Toast.LENGTH_SHORT).show();
 
                 }
 
@@ -131,8 +131,15 @@ public class GardenFragment2 extends Fragment implements View.OnClickListener {
 
                     @Override
                     public void onClick(final View v) {
-                        //Toast.makeText(theInflatedView.getContext(), "Pos:"+position, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(theInflatedView.getContext(), "Pos:" + position, Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(theInflatedView.getContext(), InfoPlant.class);
 
+                        int selectedItems = position;
+                        String fRef = String.valueOf(mFirebaseAdapter.getRef(selectedItems).getKey());
+                        intent.putExtra("PLANT_REF", fRef);
+                        startActivity(intent);
+
+                        Toast.makeText(theInflatedView.getContext(), ""+ mFirebaseAdapter.getRef(position).getKey(), Toast.LENGTH_SHORT).show();
                         /*
                         AlertDialog.Builder builder = new AlertDialog.Builder(theInflatedView.getContext());
                         builder.setMessage("Deseas eliminar este elemento?").setCancelable(false)
