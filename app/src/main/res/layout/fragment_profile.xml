@@ -32,6 +32,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/txtUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
@@ -42,6 +43,7 @@
             android:textSize="24sp" />
 
         <TextView
+            android:id="@+id/txtUseremail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
