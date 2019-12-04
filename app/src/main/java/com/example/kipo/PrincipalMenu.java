@@ -1,8 +1,11 @@
 package com.example.kipo;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
@@ -16,6 +19,11 @@ import android.widget.Toast;
 public class PrincipalMenu extends AppCompatActivity {
 
     private TextView myText;
+    //Firebase authentication
+    private FirebaseAuth firebaseAuth;
+    private FirebaseAuth.AuthStateListener firebaseAuthListener;
+    private FirebaseUser user;
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -63,6 +71,25 @@ public class PrincipalMenu extends AppCompatActivity {
                 new ProfileFragment()).commit();
         myText.setText("Profile");
 
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        user = firebaseAuth.getCurrentUser();
+        firebaseAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if (user != null) {
+                    goMainScreen();
+                }
+            }
+        };
+
     }
+
+    public void goMainScreen() {
+        Intent intent = new Intent(PrincipalMenu.this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
 
 }
