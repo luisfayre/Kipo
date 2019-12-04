@@ -11,18 +11,19 @@
         android:id="@+id/pr"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:orientation="horizontal"
         android:background="#F8F8F8"
-        android:elevation="2dp">
+        android:elevation="2dp"
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/btnBack"
             style="@style/button"
-            android:background="@drawable/ic_keyboard_arrow_left_black_24dp"
             android:layout_width="50dp"
             android:layout_height="42dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
+            android:background="@drawable/ic_keyboard_arrow_left_black_24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -42,9 +43,9 @@
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_marginTop="70dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp">
 
         <ImageView
             android:id="@+id/imageView6"
@@ -55,14 +56,14 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
+            android:elevation="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/planta2"
-            android:elevation="2dp"/>
+            app:srcCompat="@drawable/planta2" />
 
         <!--Button
             android:id="@+id/button2"
@@ -137,33 +138,36 @@
                 style="@style/button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_alignParentStart="true"
                 android:layout_margin="8dp"
-                android:textSize="12sp"
-                android:text="Cannabis" />
+                android:layout_weight="1"
+                android:onClick="tipo"
+                android:text="Bonsai"
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/button10"
                 style="@style/button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_centerInParent="true"
                 android:layout_margin="8dp"
-                android:textSize="12sp"
-                android:text="Cactus" />
+                android:layout_weight="1"
+                android:onClick="tipo"
+                android:text="Cactus"
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/button11"
                 style="@style/button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_alignParentEnd="true"
                 android:layout_margin="8dp"
-                android:textSize="12sp"
-                android:text="Cactaceae" />
+                android:layout_weight="1"
+                android:onClick="tipo"
+                android:text="Peyote"
+                android:textSize="12sp" />
         </LinearLayout>
 
 
@@ -178,33 +182,36 @@
                 style="@style/button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_alignParentStart="true"
                 android:layout_margin="8dp"
-                android:textSize="12sp"
-                android:text="Rosa" />
+                android:layout_weight="1"
+                android:onClick="tipo"
+                android:text="Rosa"
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/button13"
                 style="@style/button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_centerInParent="true"
                 android:layout_margin="8dp"
-                android:textSize="12sp"
-                android:text="Peyote" />
+                android:layout_weight="1"
+                android:onClick="tipo"
+                android:text="sanseviera"
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/button14"
                 style="@style/button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_alignParentEnd="true"
                 android:layout_margin="8dp"
-                android:textSize="12sp"
-                android:text="Tulipa" />
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="Tulipa"
+                android:textSize="12sp" />
         </LinearLayout>
 
     </GridLayout>
@@ -221,7 +228,7 @@
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:text="ADD"/>
+            android:text="ADD" />
 
         <!--Button
             android:onClick="ver"

@@ -216,6 +216,9 @@ public class AddPlant extends AppCompatActivity{
             });
         }
     }
+
+    public void tipo(View view) {
+    }
 /*
     public void ver(View view) {
         Intent intent = new Intent(this, showPlantData.class);
