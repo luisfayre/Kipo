@@ -67,12 +67,15 @@ public class GardenFragment2 extends Fragment implements View.OnClickListener {
         // listPlants = theInflatedView.findViewById(R.id.listPlants);
         recyclerView = theInflatedView.findViewById(R.id.mostrar_datos_ly);
 
+        //FirebaseDatabase.getInstance().setPersistenceEnabled(true);
 
         firebaseAuth = FirebaseAuth.getInstance();
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         myRef = FirebaseDatabase.getInstance().getReference("plants").child(user.getUid());
+
+        myRef.keepSynced(true);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(theInflatedView.getContext()));
         Toast.makeText(getContext(), "Cargando tus plantas...", Toast.LENGTH_SHORT).show();
