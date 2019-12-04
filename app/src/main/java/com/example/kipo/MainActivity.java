@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-                if(user != null){
+                if (user != null) {
                     goMainScreen();
                 }
             }
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         createUsser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Register.class);
+                Intent intent = new Intent(MainActivity.this, Register.class);
                 startActivity(intent);
             }
         });
@@ -108,11 +108,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                 String resultado = dataSnapshot.getValue(String.class);
-                                resultado = resultado==null ? "":resultado;
-                                if(resultado.equals("")){
+                                resultado = resultado == null ? "" : resultado;
+                                if (resultado.equals("")) {
                                     texto.setText("Username do not match");
                                     texto.setVisibility(View.VISIBLE);
-                                }else{
+                                } else {
                                     texto.setText("Your password is: " + resultado);
                                     texto.setVisibility(View.VISIBLE);
                                 }
@@ -136,8 +136,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnLog.setOnClickListener(this);
 
     }
-    public void inicializarFirebase(){
-        if(rootRef == null) {
+
+    public void inicializarFirebase() {
+        if (rootRef == null) {
             //Firebase hacer persistentes los datos y funcionalidad offline
             //FirebaseDatabase.getInstance().setPersistenceEnabled(true);
             //Firebase referencia a la instancia principal de la base de datos
@@ -145,13 +146,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    public void quitarBarraSuperior(){
+    public void quitarBarraSuperior() {
         requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
         getSupportActionBar().hide(); // hide the title bar
     }
 
     //Metodo sin al autentificacion
-    public void logIn(){
+    public void logIn() {
         //Desabilitar boton hasta que termine de buscar en la base de datos
         btnLog.setEnabled(false);
 
@@ -167,11 +168,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 passDB = dataSnapshot.getValue(String.class);
                 //Hacer comprobacion
-                passDB = passDB == null ? "":passDB;
-                if(passDB.equals(passInput) && !passDB.equals("")) {
+                passDB = passDB == null ? "" : passDB;
+                if (passDB.equals(passInput) && !passDB.equals("")) {
                     goMainScreen();
-                }else{
-                    Toast.makeText(MainActivity.this,  "Password or user invalid", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "Password or user invalid", Toast.LENGTH_SHORT).show();
                 }
                 btnLog.setEnabled(true);
             }
@@ -183,7 +184,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
 
-    public void logInEmail(){
+    public void logInEmail() {
         //Desabilitar boton hasta que termine de buscar en la base de datos
         btnLog.setEnabled(false);
 
@@ -191,16 +192,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         userInput = editTextUser.getText().toString();//email
         passInput = editTextPass.getText().toString();//password
 
-        if(userInput.equals("")||passInput.equals("")){
-            Toast.makeText(MainActivity.this,  "Password or user missing", Toast.LENGTH_SHORT).show();
-        }else{
-            firebaseAuth.signInWithEmailAndPassword(userInput,passInput).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        if (userInput.equals("") || passInput.equals("")) {
+            Toast.makeText(MainActivity.this, "Password or user missing", Toast.LENGTH_SHORT).show();
+        } else {
+            firebaseAuth.signInWithEmailAndPassword(userInput, passInput).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(task.isSuccessful()) {
+                    if (task.isSuccessful()) {
                         //Exito en la operacion
-                    }else{
-                        Toast.makeText(MainActivity.this,  "Invalid User", Toast.LENGTH_SHORT).show();
+                        goMainScreen();
+                    } else {
+                        Toast.makeText(MainActivity.this, "Invalid User", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -208,7 +210,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnLog.setEnabled(true);
     }
 
-    public void goMainScreen(){
+    public void goMainScreen() {
         Intent intent = new Intent(MainActivity.this, PrincipalMenu.class);
         startActivity(intent);
         finish();
@@ -229,7 +231,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onStop() {
         super.onStop();
-        if(firebaseAuthListener != null){
+        if (firebaseAuthListener != null) {
             firebaseAuth.removeAuthStateListener(firebaseAuthListener);
         }
     }
