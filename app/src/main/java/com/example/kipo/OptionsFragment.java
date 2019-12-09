@@ -21,9 +21,12 @@ public class OptionsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View theInflatedView = inflater.inflate(R.layout.fragment_options,container,false);
-        listOptions = theInflatedView.findViewById(R.id.listOptions);
+       /* listOptions = theInflatedView.findViewById(R.id.listOptions);
         listOptions.setAdapter(new ArrayAdapter<String>(getActivity(),
                 android.R.layout.simple_list_item_1,comida));
+
+
+        */
         return theInflatedView;
     }
 }

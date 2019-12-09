@@ -130,20 +130,10 @@ public class GardenFragment2 extends Fragment implements View.OnClickListener {
 
                 }
 
-                viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-
+                viewHolder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
                     @Override
-                    public void onClick(final View v) {
-                        Toast.makeText(theInflatedView.getContext(), "Pos:" + position, Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(theInflatedView.getContext(), InfoPlant.class);
-
+                    public boolean onLongClick(View view) {
                         int selectedItems = position;
-                        String fRef = String.valueOf(mFirebaseAdapter.getRef(selectedItems).getKey());
-                        intent.putExtra("PLANT_REF", fRef);
-                        startActivity(intent);
-
-                        Toast.makeText(theInflatedView.getContext(), ""+ mFirebaseAdapter.getRef(position).getKey(), Toast.LENGTH_SHORT).show();
-                        /*
                         AlertDialog.Builder builder = new AlertDialog.Builder(theInflatedView.getContext());
                         builder.setMessage("Deseas eliminar este elemento?").setCancelable(false)
                                 .setPositiveButton("Si", new DialogInterface.OnClickListener() {
@@ -164,7 +154,28 @@ public class GardenFragment2 extends Fragment implements View.OnClickListener {
                                 });
                         AlertDialog dialog = builder.create();
                         dialog.setTitle("Confimar");
-                        dialog.show();*/
+                        dialog.show();
+
+                        return true;
+                    }
+
+
+                });
+
+                viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(final View v) {
+                       // Toast.makeText(theInflatedView.getContext(), "Pos:" + position, Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(theInflatedView.getContext(), InfoPlant.class);
+
+                        int selectedItems = position;
+                        String fRef = String.valueOf(mFirebaseAdapter.getRef(selectedItems).getKey());
+                        intent.putExtra("PLANT_REF", fRef);
+                        startActivity(intent);
+
+                        //Toast.makeText(theInflatedView.getContext(), ""+ mFirebaseAdapter.getRef(position).getKey(), Toast.LENGTH_SHORT).show();
+
                     }
                 });
 

@@ -1,13 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f1f1db">
+    android:orientation="vertical">
 
 
-    <ListView
-        android:id="@+id/listOptions"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/layLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnLogOut"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="200dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtUsername4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/montserrat"
+            android:lineSpacingExtra="7sp"
+            android:text="Integrantes"
+            android:textColor="#ad000000"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtUsername3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/montserrat"
+            android:lineSpacingExtra="7sp"
+            android:text="Jofiel Batista Farias"
+            android:textColor="#ad000000"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtUsername2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/montserrat"
+            android:lineSpacingExtra="7sp"
+            android:text="David Aaron Banda Gutierrez"
+            android:textColor="#ad000000"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:fontFamily="@font/montserrat"
+            android:lineSpacingExtra="7sp"
+            android:text="Iram Josue Navarrete Caraveo"
+            android:textColor="#ad000000"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtUseremail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/montserrat"
+            android:lineSpacingExtra="7sp"
+            android:text="Luis Angel Alcudia Juarez"
+            android:textColor="#ad000000"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/montserrat"
+            android:lineSpacingExtra="7sp"
+            android:text="Cupcake"
+            android:textColor="#ad000000"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+</RelativeLayout>
